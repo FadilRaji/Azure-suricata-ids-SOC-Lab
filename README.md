@@ -13,18 +13,43 @@ Simulate a cloud SOC environment in Azure, collecting and analyzing network and 
 - Nmap (attack simulation)
 - SSH (authentication logs)
 
-## Lab Steps
-1. Deployed Linux VM (`SOC-Linux-IDS`) and Windows SOC VM
-2. Enabled NSG Flow Logs & Network Watcher
-3. Installed Suricata on Linux VM
-4. Simulated attacks:
-   - SSH brute-force attempts
-   - Nmap port scans
-5. Collected and analyzed logs in Suricata and Azure Sentinel
-6. Responded:
-   - Blocked malicious IPs via NSG rules
-   - Documented incidents
-7. Created dashboards and KQL queries in Sentinel
+# Azure SOC Lab — IDS & Sentinel
+
+## Lab Overview
+
+The lab consisted of:
+
+- **Deploying VMs:** I set up a Linux VM to act as the monitored server and a Windows VM to act as the attacker/SOC workstation.
+- **Monitoring Network Traffic:** Enabled NSG Flow Logs and Network Watcher to record all inbound and outbound traffic.
+- **Installing Suricata IDS:** The Linux VM ran Suricata to detect suspicious network activity.
+- **Simulating Attacks:** I launched SSH brute-force attempts and Nmap port scans to generate alerts.
+- **Detection & Investigation:** I monitored real-time alerts in Suricata and Azure Sentinel dashboards, wrote KQL queries, and analyzed logs.
+- **Incident Response:** Malicious IPs were blocked in NSG rules, and I documented the entire response workflow.
+
+---
+
+## Key Lessons Learned
+
+From this project, I gained hands-on experience in several critical SOC analyst skills:
+
+### Threat Detection
+- Learned how IDS like Suricata works to identify suspicious traffic.
+- Understood how SSH brute-force attempts and Nmap scans appear in logs.
+
+### SIEM Analysis
+- Learned how to ingest logs into Azure Sentinel.
+- Created dashboards and KQL queries to visualize security events.
+
+### Network Monitoring
+- Learned to enable and analyze NSG Flow Logs.
+- Observed traffic patterns and detected malicious IPs in real time.
+
+### Incident Response
+- Practiced blocking attacker IPs via NSG rules.
+- Documented alerts and actions to simulate real-world SOC reporting.
+
+### Log Correlation
+
 
 ## Key Skills Demonstrated
 - Threat detection and investigation
